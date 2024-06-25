@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <!-- PAGE INFO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buonna Pizza</title>
+
+    <!-- Icones -->
+    <link rel="stylesheet" href="assets/fonts/style.css" />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <header id="header">
+        <nav class="container">
+            <!-- logo -->
+            <a class="logo" href="#">Buonna<span>Pizza</span>.</a>
+            <!-- menu -->
+            <div class="menu">
+                <ul class="grid">
+                    <li><a class="title" href="#cardapio">Cardápio</a></li>
+                    <li><a class="title" href="#quemSomos">Quem Somos</a></li>
+                    <li><a class="title" href="#contato">Contato</a></li>
+                    <li><a class="title" href="#reserve">Reserve</a></li>
+                </ul>
+            </div>
+            <!-- /menu -->
+            <div class="toggle icon-menu"></div>
+            <div class="toggle icon-close"></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section" id="home">
+            <div class="container grid">
+                <div class="image">
+                    <img src="img/pizzaria.webp" alt="Pizzaria Buonna Pizza" />
+                </div>
+                <div class="text">
+                    <h2 class="title">Bem-vindo à Pizzaria Buonna Pizza</h2>
+                    <p>A melhor pizza de São Paulo com ingredientes frescos e um toque tradicional.</p>
+                    <a class="button" href="#cardapio">Ver Cardápio</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="cardapio">
+            <div class="container grid">
+                <div class="image">
+                    <img />
+                </div>
+                <div class="text">
+                    <h2 class="title">Cardápio</h2>
+                    <div class="menu-item">
+                        <h3>Pizzas</h3>
+                        <br />
+                        <img src="" alt="">
+                        <img src="img/calabresa.webp" alt="">
+                        <p><strong>Calabresa</strong><br />Molho, Mussarela, Calabresa, Cebola, Azeitona e Orégano<br />R$ 49,00</p>
+                        <img src="img/Quatro queijos.webp" alt="">
+                        <p><strong>Quatro Queijos</strong><br />Molho, Mussarela, Provolone, Parmesão, Gorgonzola, Tomate, Azeitona e Orégano<br />R$ 52,00</p>
+                        <img src="img/Italiana.webp" alt="">
+                        <p><strong>Italiana</strong><br />Molho, Mussarela, Catupiry, Salaminho, Azeitona e Orégano<br />R$ 59,99</p>
+                        <img src="img/presunto.webp" alt="">
+                        <p><strong>Presunto</strong><br />Molho, Mussarela, Presunto, Tomate, Azeitona e Orégano<br />R$ 51,00</p>
+                    </div>
+                    <div class="menu-item">
+                        <br />
+                        <h3>Bebidas</h3>
+                        <br />
+                        <p><strong>Coca-Cola 1,5L</strong> R$ 7,00</p>
+                        <p><strong>Coca-Cola 2L</strong> R$ 10,00</p>
+                        <p><strong>Coca-Cola Lata</strong> R$ 4,00</p>
+                        <p><strong>Fanta Laranja 2L</strong> R$ 7,00</p>
+                        <p><strong>Guaraná Antarctica 2L</strong> R$ 10,00</p>
+                        <p><strong>Sprite 2L</strong> R$ 7,00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-1"></div>
+
+        <section class="section" id="quemSomos">
+            <div class="container grid">
+                <div class="image"></div>
+                <div class="text">
+                    <h2 class="title">Quem Somos</h2>
+                    <p>A Pizzaria Buonna Pizza abriu as portas em 1910, fundada pelo pizzaiolo Carmino Corvino quando este veio morar no Brasil, no tradicional bairro paulistano conhecido como Brás.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-2"></div>
+
+        <div class="divider-1"></div>
+
+        <section class="section" id="contato">
+            <div class="container grid">
+                <div class="image">
+                    <span class="material-symbols-outlined">chat</span>
+                </div>
+                <div class="text">
+                    <h2 class="title">Contato</h2>
+                    <p>WhatsApp: (11) 97777-7777</p>
+                    <p>Instagram: @buonnapizza</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-2"></div>
+
+        <section class="section" id="reserve">
+            <div class="container grid">
+                <div class="image">
+                    <span class="material-symbols-outlined">import_contacts</span>
+                </div>
+                <div class="text">
+                    <h2 class="title">Reserve o seu pedido</h2>
+                    <form action="pedido.html" method="get">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" id="endereco" name="endereco" required>
+                        <div class="menu-item">
+                            <h3>Pizzas</h3>
+                            <br>
+                            <div class="menu-option">
+                                <input type="checkbox" id="calabresa" name="calabresa">
+                                <label for="calabresa"><strong>Calabresa</strong> - R$ 49,00</label>
+                                <label for="qty-calabresa">Quantidade:</label>
+                                <input type="number" id="qty-calabresa" name="qty-calabresa" min="1" max="10">
+                            </div>
+                            <div class="menu-option">
+                                <input type="checkbox" id="quatro-queijos" name="quatro-queijos">
+                                <label for="quatro-queijos"><strong>Quatro Queijos</strong> - R$ 52,00</label>
+                                <label for="qty-quatro-queijos">Quantidade:</label>
+                                <input type="number" id="qty-quatro-queijos" name="qty-quatro-queijos" min="1" max="10">
+                            </div>
+                            <div class="menu-option">
+                                <input type="checkbox" id="italiana" name="italiana">
+                                <label for="italiana"><strong>Italiana</strong> - R$ 59,99</label>
+                                <label for="qty-italiana">Quantidade:</label>
+                                <input type="number" id="qty-italiana" name="qty-italiana" min="1" max="10">
+                            </div>
+                            <div class="menu-option">
+                                <input type="checkbox" id="presunto" name="presunto">
+                                <label for="presunto"><strong>Presunto</strong> - R$ 51,00</label>
+                                <label for="qty-presunto">Quantidade:</label>
+                                <input type="number" id="qty-presunto" name="qty-presunto" min="1" max="10">
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <br>
+                            <h3>Bebidas</h3>
+                            <br>
+                            <div class="menu-option">
+                                <input type="checkbox" id="coca-cola-1.5L" name="coca-cola-1.5L">
+                                <label for="coca-cola-1.5L"><strong>Coca-Cola 1,5L</strong> - R$ 7,00</label>
+                                <label for="qty-coca-cola-1.5L">Quantidade:</label>
+                                <input type="number" id="qty-coca-cola-1.5L" name="qty-coca-cola-1.5L" min="1" max="10">
+                            </div>
+                            <div class="menu-option">
+                                <input type="checkbox" id="coca-cola-2L" name="coca-cola-2L">
+                                <label for="coca-cola-2L"><strong>Coca-Cola 2L</strong> - R$ 10,00</label>
+                                <label for="qty-coca-cola-2L">Quantidade:</label>
+                                <input type="number" id="qty-coca-cola-2L" name="qty-coca-cola-2L" min="1" max="10">
+                            </div>
+                            <div class="menu-option">
+                                <input type="checkbox" id="coca-cola-lata" name="coca-cola-lata">
+                                <label for="coca-cola-lata"><strong>Coca-Cola Lata</strong> - R$ 4,00</label>
+                                <label for="qty-coca-cola-lata">Quantidade:</label>
+                                <input type="number" id="qty-coca-cola-lata" name="qty-coca-cola-lata" min="1" max="10">
+                            </div>
+                            <div class="menu-option">
+                                <input type="checkbox" id="fanta-laranja-2L" name="fanta-laranja-2L">
+                                <label for="fanta-laranja-2L"><strong>Fanta Laranja 2L</strong> - R$ 7,00</label>
+                                <label for="qty-fanta-laranja-2L">Quantidade:</label>
+                                <input type="number" id="qty-fanta-laranja-2L" name="qty-fanta-laranja-2L" min="1" max="10">
+                            </div>
+                            <div class="menu-option">
+                                <input type="checkbox" id="guarana-antarctica-2L" name="guarana-antarctica-2L">
+                                <label for="guarana-antarctica-2L"><strong>Guaraná Antarctica 2L</strong> - R$ 10,00</label>
+                                <label for="qty-guarana-antarctica-2L">Quantidade:</label>
+                                <input type="number" id="qty-guarana-antarctica-2L" name="qty-guarana-antarctica-2L" min="1" max="10">
+                            </div>
+                            <div class="menu-option">
+                                <input type="checkbox" id="sprite-2L" name="sprite-2L">
+                                <label for="sprite-2L"><strong>Sprite 2L</strong> - R$ 7,00</label>
+                                <label for="qty-sprite-2L">Quantidade:</label>
+                                <input type="number" id="qty-sprite-2L" name="qty-sprite-2L" min="1" max="10">
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="button">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Buonna Pizza. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para definir quantidade automaticamente ao selecionar o checkbox
+        function setQuantityOnCheckboxChange(checkboxId, quantityId) {
+            const checkbox = document.getElementById(checkboxId);
+            const quantityInput = document.getElementById(quantityId);
+
+            checkbox.addEventListener('change', function() {
+                if (this.checked) {
+                    quantityInput.value = 1;
+                } else {
+                    quantityInput.value = '';
+                }
+            });
+        }
+
+        // Configurar quantidade automática para cada item
+        setQuantityOnCheckboxChange('calabresa', 'qty-calabresa');
+        setQuantityOnCheckboxChange('quatro-queijos', 'qty-quatro-queijos');
+        setQuantityOnCheckboxChange('italiana', 'qty-italiana');
+        setQuantityOnCheckboxChange('presunto', 'qty-presunto');
+        setQuantityOnCheckboxChange('coca-cola-1.5L', 'qty-coca-cola-1.5L');
+        setQuantityOnCheckboxChange('coca-cola-2L', 'qty-coca-cola-2L');
+        setQuantityOnCheckboxChange('coca-cola-lata', 'qty-coca-cola-lata');
+        setQuantityOnCheckboxChange('fanta-laranja-2L', 'qty-fanta-laranja-2L');
+        setQuantityOnCheckboxChange('guarana-antarctica-2L', 'qty-guarana-antarctica-2L');
+        setQuantityOnCheckboxChange('sprite-2L', 'qty-sprite-2L');
+    </script>
+     <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Recebido</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #D97126;
+            --secondary-color: #D97126;
+            --text-color: #333;
+            --background-color: #f7f7f7;
+            --card-background: #fff;
+            --border-radius: 8px;
+            --padding: 20px;
+            --margin: 20px;
+            --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: var(--card-background);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: var(--padding);
+            max-width: 500px;
+            width: 100%;
+            margin: var(--margin);
+            text-align: center;
+        }
+
+        .container h1 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .pedido-detalhes {
+            text-align: left;
+        }
+
+        .pedido-detalhes p {
+            background-color: var(--secondary-color);
+            padding: 10px;
+            border-radius: var(--border-radius);
+            color: white;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .pedido-detalhes p span {
+            display: block;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 15px;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pedido Recebido</h1>
+        <p>Seu pedido será entregue em 60 minutos</p>
+        <div id="pedido-detalhes" class="pedido-detalhes"></div>
+    </div>
+
+    <script>
+        // Função para pegar os parâmetros da URL
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+
+            urlParams.forEach((value, key) => {
+                params[key] = value;
+            });
+
+            return params;
+        }
+
+        // Função para exibir os detalhes do pedido
+        function displayPedidoDetails() {
+            const params = getQueryParams();
+            const detalhesDiv = document.getElementById('pedido-detalhes');
+            const itemMap = {
+                'nome': 'Nome',
+                'endereco': 'Endereço',
+                'calabresa': 'Pizza Calabresa',
+                'qty-calabresa': ' Quantidade Pizza de Calabresa',
+                'quatro-queijos': 'Pizza Quatro Queijos',
+                'qty-quatro-queijos': 'Quantidade Pizza Quatro Queijos',
+                'italiana': 'Pizza Italiana',
+                'qty-italiana': 'Quantidade Pizza Italiana',
+                'presunto': 'Pizza Presunto',
+                'qty-presunto': 'Quantidade Pizza de Presunto',
+                'coca-cola-1.5L': 'Coca-Cola 1,5L',
+                'qty-coca-cola-1.5L': 'Quantidade Coca-Cola 1,5L',
+                'coca-cola-2L': 'Coca-Cola 2L',
+                'qty-coca-cola-2L': 'Quantidade Coca-Cola 2L',
+                'coca-cola-lata': 'Coca-Cola Lata',
+                'qty-coca-cola-lata': 'Quantidade Coca-Cola Lata',
+                'fanta-laranja-2L': 'Fanta Laranja 2L',
+                'qty-fanta-laranja-2L': 'Quantidade Fanta Laranja 2L',
+                'guarana-antarctica-2L': 'Guaraná Antarctica 2L',
+                'qty-guarana-antarctica-2L': 'Quantidade Guaraná Antarctica 2L',
+                'sprite-2L': 'Sprite 2L',
+                'qty-sprite-2L': 'Quantidade Sprite 2L',
+            };
+
+            for (const key in params) {
+                if (params.hasOwnProperty(key) && params[key]) {
+                    const p = document.createElement('p');
+                    p.innerHTML = `<strong>${itemMap[key]}:</strong> <span>${params[key]}</span>`;
+                    detalhesDiv.appendChild(p);
+                }
+            }
+        }
+
+        // Chama a função para exibir os detalhes do pedido ao carregar a página
+        window.onload = displayPedidoDetails;
+    </script>
+</body>
+</html>

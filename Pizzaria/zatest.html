@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- PAGE INFO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Buonna Pizza</title>
+
+    <!-- Icones -->
+    <link rel="stylesheet" href="assets/fonts/style.css">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <nav class="container">
+            <!-- logo -->
+            <a class="logo" href="#">Buonna<span>Pizza</span>.</a>
+            <!-- menu -->
+            <div class="menu">
+                <ul class="grid">
+                    <li><a class="title" href="#cardapio">Cardápio</a></li>
+                    <li><a class="title" href="#about">Quem Somos</a></li>
+                    <li><a class="title" href="#contato">Contato</a></li>
+                    <li><a class="title" href="#reserve">Reserve</a></li>
+                </ul>
+            </div>
+            <!-- /menu -->
+            <div class="toggle icon-menu"></div>
+            <div class="toggle icon-close"></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section" id="home">
+            <div class="container grid">
+                <div class="image">
+                    <img src="img/pizzaria.webp" alt="pizzaria">
+                </div>
+                <div class="text">
+                    <h2 class="title">Bem-vindo à Pizzaria Buonna Pizza</h2>
+                    <p>
+                        A melhor pizza de São Paulo com ingredientes frescos e um toque tradicional.
+                    </p>
+                    <a class="button" href="#cardapio">Ver Cardápio</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-1"></div>
+
+        <section class="section" id="cardapio">
+            <div class="container grid">
+                <div class="image">
+                    <img src="https://source.unsplash.com/random/500x500?pizza" alt="Pizza">
+                </div>
+                <div class="text">
+                    <h2 class="title">Cardápio</h2>
+                    <div class="menu-item">
+                        <h3>Pizzas</h3>
+                        <p><strong>Calabresa</strong><br>Molho, Mussarela, Calabresa, Cebola, Azeitona e Orégano<br>R$ 49,00</p>
+                        <p><strong>Quatro Queijos</strong><br>Molho, Mussarela, Provolone, Parmesão, Gorgonzola, Tomate, Azeitona e Orégano<br>R$ 52,00</p>
+                        <p><strong>Italiana</strong><br>Molho, Mussarela, Catupiry, Salaminho, Azeitona e Orégano<br>R$ 59,99</p>
+                        <p><strong>Presunto</strong><br>Molho, Mussarela, Presunto, Tomate, Azeitona e Orégano<br>R$ 51,00</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Bebidas</h3>
+                        <p><strong>Coca-Cola 1,5L</strong> R$ 7,00</p>
+                        <p><strong>Coca-Cola 2L</strong> R$ 10,00</p>
+                        <p><strong>Coca-Cola Lata</strong> R$ 4,00</p>
+                        <p><strong>Fanta Laranja 2L</strong> R$ 7,00</p>
+                        <p><strong>Guaraná Antarctica 2L</strong> R$ 10,00</p>
+                        <p><strong>Sprite 2L</strong> R$ 7,00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-2"></div>
+
+        <section class="section" id="quem-somos">
+            <div class="container grid">
+                <div class="image">
+                    <img src="https://source.unsplash.com/random/500x500?restaurant" alt="Pizzaria">
+                </div>
+                <div class="text">
+                    <h2 class="title">Quem Somos</h2>
+                    <p>A Pizzaria Buonna Pizza abriu as portas em 1910, fundada pelo pizzaiolo Carmino Corvino quando este veio morar no Brasil, no tradicional bairro paulistano conhecido como Brás.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-1"></div>
+
+        <section class="section" id="contato">
+            <div class="container grid">
+                <div class="image">
+                    <img src="https://source.unsplash.com/random/500x500?phone" alt="Contato">
+                </div>
+                <div class="text">
+                    <h2 class="title">Contato</h2>
+                    <p>WhatsApp: (11) 97777-7777</p>
+                    <p>Instagram: @buonnapizza</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-2"></div>
+
+        <section class="section" id="reserve">
+            <div class="container grid">
+                <div class="image">
+                    <img src="https://source.unsplash.com/random/500x500?order" alt="Reserve">
+                </div>
+                <div class="text">
+                    <h2 class="title">Reserve o seu pedido</h2>
+                    <form>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" id="endereco" name="endereco" required>
+                        <label for="pedido">Pedido:</label>
+                        <textarea id="pedido" name="pedido" required></textarea>
+                        <button type="submit" class="button">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Buonna Pizza. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
